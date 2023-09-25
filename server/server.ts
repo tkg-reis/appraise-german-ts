@@ -1,20 +1,19 @@
+import env from "dotenv";
+env.config();
 import express from 'express';
-import mongoose from'mongoose';
-import "dotenv/config"
-const app = express();
+import type { Express, Request, Response } from 'express';
+import "../database/db";
+import apiRoutes from "./api-routes/index";
+const app: Express = express();
 
-const PORT = 3000;
+const port = process.env.PORT || 8080;
+
+app.get('/', (req: Request, res: Response) => res.send('Hello World!'));
 
 app.use("/api", express.json());
 
-mongoose.connect(process.env.MONGOURI!).then(() => {
-    console.log("connected to mongoDB");
-    console.log(process.env.MONGOURI);
-    
-}).catch((err) => {
-    console.log(err);
-})
+app.use("/api", apiRoutes);
 
-app.listen(PORT, () => {
-    console.log(`server is running on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`server is running on port ${port}`);
 })

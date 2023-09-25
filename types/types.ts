@@ -6,3 +6,8 @@ export interface germanInfo {
     val: number
 }
 
+// db.ts ,
+export interface mongoSetting {
+    useNewUrlParser: boolean,
+    useUnifiedTopology: boolean
+}
