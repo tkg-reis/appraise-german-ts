@@ -1,6 +1,7 @@
 // German.ts Schema
 
 export interface germanInfo {
+    name: string,
     word: string,
     points: number,
     val: number

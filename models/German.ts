@@ -5,6 +5,11 @@ import { germanInfo } from "../types/types"
 
 const germanSchema = new Schema<germanInfo>(
     {
+        name: {
+            type: "String",
+            required: true,
+            maxlength: 20,
+        },
         word: {
             type: String,
             required: true,
@@ -28,6 +33,6 @@ const germanSchema = new Schema<germanInfo>(
     }
 );
 
-const German = model<germanInfo>("German", germanSchema);
+const German = model<germanInfo>("germanWordswo", germanSchema);
 
 export default German;
