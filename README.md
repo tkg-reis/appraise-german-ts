@@ -46,5 +46,15 @@ https://zenn.dev/oreo2990/articles/3d780560c5e552
 ただし非nullアサーション演算子の乱用は避ける。バグが発生する可能性があるため。
 
 ###
+reactのルーティングの設定
+
+ref
+https://zenn.dev/925rycki/articles/744093eeb0ece6
+
+結論：基本構造はかなり決まっていて、nextjsのルーティングが作られたのもなんだか納得。
+
+###
+
+
 
 
